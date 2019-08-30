@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+    <style>
+        .container{
+            margin-top: 18%;
+            border:8px solid black;
+            margin-left: 10%;
+            margin-right: 10%;
+
+        }
+        .heading{
+            text-align: center;
+            font-size: xx-large;
+            font-weight: bolder;
+            display: block;
+            color:black;
+            margin-bottom: 10px;
+        }
+        h2{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <span class="heading">Customer Insurance Coverage Prediction</span>
+
+    <h2 class="heading">Upload File</h2>
+
+    <form id="upload-form" action="{{ url_for('upload')}}" method="post" enctype="multipart/form-data" class="heading">
+        <input style="color: black" type="file" name="file" accept="csv/*" multiple>
+        <input type="submit" value="Upload">
+    </form>
+</div>
+</body>
+
+</html>
